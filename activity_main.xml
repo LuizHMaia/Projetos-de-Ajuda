@@ -5,25 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffffff">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_icone"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20sp">
+
+        <ImageView
+            android:layout_width="94dp"
+            android:layout_height="99dp"
+            android:src="@drawable/livro"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_titulo"
+            android:layout_gravity="center_vertical"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cadastrar"
+        android:text="@string/btn_cadastrar"
+        android:textSize="20sp"
         android:id="@+id/btnCadastrar"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginBottom="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_pesquisar_por"
+        android:textSize="20sp"
+        android:layout_margin="10sp"
+        android:textColor="#000"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/rdgPesquisarPor">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_titulo"
+            android:id="@+id/rdbPesquisarPorTitulo"
+            android:textSize="20sp"
+            android:layout_margin="10sp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_ano"
+            android:id="@+id/rdbPesquisarPorAno"
+            android:textSize="20sp"
+            android:layout_margin="10sp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rdb_pesquisar_todos"
+            android:id="@+id/rdbPesquisarTodos"
+            android:textSize="20sp"
+            android:layout_margin="10sp"/>
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtPesquisar"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_entrar"
-        android:id="@+id/btnEntra"/>
+        android:text="@string/btn_pesquisar"
+        android:textSize="20sp"
+        android:id="@+id/btnPesquisar"/>
+
 
 
 </LinearLayout>
